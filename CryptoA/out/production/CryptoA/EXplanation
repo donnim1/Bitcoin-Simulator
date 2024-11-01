@@ -1,0 +1,28 @@
+1. Creation of Network, Agents, and Miners:
+   - An instance of the `Network` class is created to represent the peer-to-peer network.
+   - Three instances of the `Agent` class (`agent1`, `agent2`, and `agent3`) are created to represent participants in the system.
+   - Two instances of the `Miner` class (`miner1` and `miner2`) are created to represent miners in the network.
+   - Agents and miners are added to the network using the `addAgent` and `addMiner` methods of the `Network` class.
+
+2. Simulating Transactions:
+   - The `simulateTransaction` method of the `Network` class is called to simulate transactions between agents.
+   - For example, `network.simulateTransaction(agent1, agent2, 5.0)` simulates agent1 sending 5.0 bitcoins to agent2.
+   - The sender's balance is reduced by the transaction amount, and the recipient's balance is increased accordingly.
+   - The transaction is added to the sender's and recipient's transaction histories.
+   - The updated balances are printed.
+
+3. Simulating Mining:
+   - The `simulateMining` method of the `Network` class is called to simulate the mining process.
+   - The `mine` method of the miner is called, passing a transaction from an agent.
+   - The miner attempts to solve the proof-of-work puzzle by varying the nonce, combined with the previous block's hash and the transaction.
+   - Once a valid solution is found, a new block is created with the solved puzzle and the transaction.
+   - The new block is added to the miner's blockchain.
+   - The updated blockchain is printed.
+
+4. Output:
+   - The `printBalances` method of the `Network` class is called, which prints the current balances of all agents.
+   - The `printBlockchain` method of the `Network` class is called, which prints the current state of the blockchain.
+
+The `main` method serves as the entry point of the program and orchestrates the interactions between the network, agents, and miners. By simulating transactions and mining, it demonstrates how bitcoins can be transferred between agents, transactions can be validated by miners, and blocks can be added to the blockchain.
+
+The output of the program provides a snapshot of the system's state after each transaction and mining operation, showing the updated balances of agents and the evolving blockchain.

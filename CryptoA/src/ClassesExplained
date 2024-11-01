@@ -1,0 +1,29 @@
+
+1. **Agent Class**: Represents an agent in the network.
+Each agent has an identifier and a balance (in bitcoins).
+The agent can send transactions to other agents if they have a sufficient balance.
+
+2. **Transaction Class**: Represents a transaction between two agents.
+It includes the sender, recipient, and the amount of bitcoins being transferred.
+
+3. **Blockchain Class**: Represents a blockchain, which is a sequential chain of blocks.
+It maintains a list of blocks and provides methods to add blocks, retrieve blocks by index, get the size of the blockchain, and get the latest block's hash.
+
+4. **Block Class**: Represents a block in the blockchain.
+Each block has a hash, previous hash, and a transaction.
+The hash represents the unique identifier of the block, the previous hash points to the hash of the previous block in the chain, and the transaction holds the details of the transaction included in the block.
+
+5. **Miner Class**: Represents a miner in the network.
+Miners are responsible for mining new blocks and adding them to the blockchain.
+The miner uses a proof-of-work algorithm to find a valid block hash.
+It continuously calculates the block hash by incrementing the nonce until a valid hash is found.
+Once a valid block hash is found, a new block is created and added to the blockchain.
+
+6. **Network Class**: Represents the network of agents and miners.
+It provides methods to add agents and miners to the network, simulate transactions between agents, and simulate mining by miners.
+It also includes methods to print agent balances and the blockchain.
+
+7. **Main Class**: Contains the main method where the network, agents, miners, and transactions are created.
+It simulates transactions and mining operations and prints the agent balances and the blockchain.
+
+Overall, the classes work together to simulate a basic network where agents can send transactions and miners can mine new blocks. The blockchain ensures the integrity and security of the transactions by maintaining a sequential chain of blocks.
